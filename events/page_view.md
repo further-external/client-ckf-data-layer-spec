@@ -35,36 +35,10 @@ window.dataLayer.push({
   }
 })
 ```
-```js
-window.dataLayer = window.dataLayer || []; // Initialize the dataLayer variable to avoid JS errors
-window.dataLayer.push({page_data: null}) // conditionally reset portions of DL 
-window.dataLayer.push({
-  "event": "page_view",
-  "page_data": {
-    "breadcrumb": "<breadcrumb>",
-    "franchise_id": "<franchise_id>",
-    "language": "<language>",
-    "page_category": "<page_category>",
-    "page_category2": "<page_category2>",
-    "page_category3": "<page_category3>",
-    "page_category4": "<page_category4>",
-    "page_category5": "<page_category5>",
-    "page_id": "<page_id>",
-    "page_name": "<page_name>",
-    "page_location": "<page_location>",
-    "page_referrer": "<page_referrer>",
-    "page_title": "<page_title>",
-    "site_section": "<site_section>",
-    "site_section2": "<site_section2>",
-    "site_section3": "<site_section3>",
-    "site_section4": "<site_section4>",
-    "site_section5": "<site_section5>",
-    "@type": "<@type>"
-  }
-})
-```
 
 ## Variable Definitions
+|Field|Type|Required|Description|Example|Pattern|Min Length|Max Length|Minimum|Maximum|Multiple Of|
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |breadcrumb|string|optional|The breadcrumb heirarchy of the page, separated by greater than (>) or slash (/).|Home>Care Services>Glossary|
 |franchise_id|string|recommended|A unique identifier for the franchise this page is associated with|1078|
 |language|string|required|The language of the page, usually retrieved from the `<html>` tag on the page|en|
