@@ -17,7 +17,8 @@ window.dataLayer.push({
     "identifier": "<identifier>",
     "job_location": "<job_location>",
     "title": "<title>",
-    "@type": "<@type>"
+    "@type": "<@type>",
+    franchise_id: '<franchise_id>'
   }
 })
 ```
@@ -31,3 +32,4 @@ window.dataLayer.push({
 |job_location|object|recommended|A (typically single) geographic location associated with the job position. See https://schema.org/jobLocation.|`{"@type": "Place","address": {  "@type": "PostalAddress",  "streetAddress": "1932 Fleming Rd",  "addressLocality": "Greensboro",  "addressRegion": "NC",  "postalCode": "27410",  "addressCountry": "US"}  }`|
 |title|string|required|The human-readible title. When used in a page_view event to represent the page title, this should be set to document.title.|Caregiver|
 |@type|string|recommended|The schema.org type for this event. For instance, for a page_view event, the page being viewed is a WebPage, but it could also be a more specific subtype like AboutPage or event a custom type your organization creates such as HomePage. Differs from type in that "@type" always should be populated with a schema.org type, while "type" can be populated with arbitrary values.|JobPosting|
+|franchise_id|integer|optional|Set on all events that can be tied back to a franchise.|143, 576, 1134|
