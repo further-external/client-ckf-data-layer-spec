@@ -18,12 +18,15 @@ window.dataLayer.push({
     "link_text": "<link_text>",
     "navigation_ancestry": "<navigation_ancestry>",
     "outbound": "<outbound>",
-    "region_ancestry": "<region_ancestry>"
+    "region_ancestry": "<region_ancestry>",
+    franchise_id: '<franchise_id>'
   }
 })
 ```
 
 ## Variable Definitions
+|Field|Type|Required|Description|Example|Pattern|Min Length|Max Length|Minimum|Maximum|Multiple Of|
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |category|string|optional|A human-readible identifier whose purpose will vary by event, but generally is used to group things (forms, links, videos) into loose assocations based upon shared characteristics. If running low on custom dimensions, you may combine multiple categories together in this field, separated by greater than (>) or slash (/). See https://schema.org/category.||
 |component_ancestry|string|optional|A hierarchical list of all components that a link is contained within|main>hero>cta-box|
 |identifier|string|optional|A unique machine-readible identifier whose purpose will vary by event, but generally is used to differentiate one "thing" (form, link, video) from another. See https://schema.org/identifier.|unique-identifier|
@@ -34,7 +37,7 @@ window.dataLayer.push({
 |navigation_ancestry|string|optional|A hierarchical list of all navigation (menu) links that a link is contained within. Generally used within dropdown/mega menus to show the path to the menu item clicked.|About Us>Testimonials|
 |outbound|boolean|recommended|Set to "true" to indicate that the user clicked on an exit link|FALSE|
 |region_ancestry|string|optional|A hierarchical list of all regions that a link is contained within.|header|
-
+|franchise_id|integer|optional|Set on all events that can be tied back to a franchise.|143, 576, 1134|
 
 
 
