@@ -13,7 +13,8 @@ dataLayer.push({
     category: '<category>',
     identifier: '<identifier>',
     name: '<name>',
-    method: '<method>'
+    method: '<method>',
+    franchise_id: '<franchise_id>'
   }
 });
 ```
@@ -26,3 +27,4 @@ dataLayer.push({
 |identifier|string|recommended|The subscription machine-readable name. This should be a unique value specific to this subscription, if one exists. If one does not exist, this can also be populated with the same value as the `name`.|newsletter_123|
 |name|string|required|The subscription human-readable name. This should be something that an analyst without a deep knowledge of the technical implementation of the site can easily identify the subscription with. It should be lowercase snake_case.|whatever_newsletter|
 |method|string|recommended|The channel through which the subscription is delivered. This is usually email, but can also be product.|email|
+|franchise_id|integer|optional|Set on all events that can be tied back to a franchise.|143, 576, 1134|
