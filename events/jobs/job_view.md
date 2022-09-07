@@ -24,6 +24,8 @@ window.dataLayer.push({
 ```
 
 ## Variable Definitions
+|Field|Type|Required|Description|Example|Pattern|Min Length|Max Length|Minimum|Maximum|Multiple Of|
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |date_posted|string|recommended|Publication date of an online listing. See https://schema.org/datePosted.|44594|
 |description|string|recommended|A description of the item. See https://schema.org/description.|Here at Comfort Keepers of Atlanta, GA our expert caregivers’ provide a personalized in-home care experience for seniors and disabled individuals to remain independent and comfortable in their own homes. Comfort Keepers uses Interactive Caregiving to ensure our clients are receiving the best care possible.\n\nLearn more on how our Comfort Keepers In-home Caregivers are bringing comfort to home while providing companionship, respite care, and more.\n\nOur team is dedicated to caring for seniors and loved ones within their homes and ensuring their safety during everyday outings and errands.|
 |employment_type|string|recommended|Type of employment (e.g. full-time, part-time, contract, temporary, seasonal, internship). See https://schema.org/employmentType.|full-time|
