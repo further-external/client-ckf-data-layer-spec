@@ -17,6 +17,7 @@ dataLayer.push({
     category: '<category>',
     identifier: '<identifier>',
     name: '<name>',
+    franchise_id: '<franchise_id>'
   }
 });
 ```
@@ -28,3 +29,4 @@ dataLayer.push({
 |category|string|recommended|A human-readible identifier whose purpose will vary by event, but generally is used to group things (forms, links, videos) into loose assocations based upon shared characteristics. If running low on custom dimensions, you may combine multiple categories together in this field, separated by greater than (>) or slash (/). See https://schema.org/category.|Job Application|
 |identifier|string|recommended|The form machine-readable name. This should be a unique value specific to this form, if one exists. If one does not exist, this can also be populated with the same value as the <name>.|form-12345|
 |name|string|required|The form human-readable name. This should be something that an analyst without a deep knowledge of the technical implementation of the site can easily identify the form with. It should be lowercase snake_case.|Caregiver 1078 Application
+|franchise_id|integer|optional|Set on all events that can be tied back to a franchise.|143, 576, 1134|

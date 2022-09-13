@@ -11,6 +11,7 @@ dataLayer.push({
   event: "logout",
   page_data: {
     user_login_state: '<user_login_state>',
+    franchise_id: '<franchise_id>'
   },
   user_data: {
     user_id: "<user_id>",
@@ -24,3 +25,4 @@ dataLayer.push({
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |user_id|string|recommended|The user identifier|1234567890|
 |user_login_state|string|contextual|Set on all events with the authentication status of the visitor.|anonymous|
+|franchise_id|integer|optional|Set on all events that can be tied back to a franchise.|143, 576, 1134|
