@@ -26,4 +26,5 @@ dataLayer.push({
 |number_of_items|integer|recommended|The total number of search results found|324|
 |search_term|string|required|The final search term submitted after any correction has been performed|Atlanta|
 |search_type|string|required|The type of search performed|franchise,job,global|
+|location|string|required|For recruitment site, the zipcode service area the user searched for|
 |location_type|string|optional|For recruitment site, the geographic region type searched for|zipcode, city, state, etc.|
