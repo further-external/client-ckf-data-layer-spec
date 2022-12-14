@@ -1,4 +1,4 @@
-# Job Application Start
+# Job View
 
 Fire whenever a user views a job.
 
