@@ -26,7 +26,7 @@ dataLayer.push({
     content_type: '<content_type>',
     item_id: '<item_id>',
     method: '<method>',
-    franchise_id: '<franchise_id>'
+    "office_id": '<office_id>'
   }
 });
 ```
@@ -38,4 +38,4 @@ dataLayer.push({
 |content_type|string|required|The type of content shared|blog, content, home, landing, product|
 |item_id|string|contextual|The product primary ID (SKU or UPC) if it is a product being shared|123456|
 |method|string|required|The platform used to share content|email, facebook, twitter|
-|franchise_id|integer|optional|Set on all events that can be tied back to a franchise.|143, 576, 1134|
+|office_id|string|optional|Set on all events that can be tied back to an office.|/ohio/springfield|
