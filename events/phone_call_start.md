@@ -11,7 +11,7 @@ dataLayer.push({
   event: 'phone_call_start',
   event_data: {
     "telephone": '<telephone>',
-    franchise_id: '<franchise_id>'
+    "office_id": '<office_id>'
   }
 });
 ```
@@ -21,4 +21,4 @@ dataLayer.push({
 |Field|Type|Required|Description|Example|Pattern|Min Length|Max Length|Minimum|Maximum|Multiple Of|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |telephone|string|recommended|The telephone number dialed|1234567890|
-|franchise_id|integer|optional|Set on all events that can be tied back to a franchise.|143, 576, 1134|
+|office_id|string|optional|Set on all events that can be tied back to an office.|/ohio/springfield|
