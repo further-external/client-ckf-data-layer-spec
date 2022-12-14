@@ -13,7 +13,7 @@ window.dataLayer.push({
     "hiring_organization": "<hiring_organization>",
     "identifier": "<identifier>",
     "method": "<method>",
-    office_id: '<office_id>'
+    "office_id": '<office_id>'
   }
 })
 ```
