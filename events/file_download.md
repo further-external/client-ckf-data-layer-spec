@@ -23,7 +23,7 @@ window.dataLayer.push({
     "navigation_ancestry": "<navigation_ancestry>",
     "outbound": "<outbound>",
     "region_ancestry": "<region_ancestry>",
-    franchise_id: '<franchise_id>'
+    "office_id": '<office_id>'
   }
 })
 ```
@@ -43,8 +43,7 @@ window.dataLayer.push({
 |navigation_ancestry|string|optional|A hierarchical list of all navigation (menu) links that a link is contained within. Generally used within dropdown/mega menus to show the path to the menu item clicked.|About Us>Testimonials|
 |outbound|boolean|recommended|Set to "true" to indicate that the user clicked on an exit link|FALSE|
 |region_ancestry|string|optional|A hierarchical list of all regions that a link is contained within.|header|
-|franchise_id|integer|optional|Set on all events that can be tied back to a franchise.|143, 576, 1134|
-
+|office_id|string|optional|Set on all events that can be tied back to an office.|/ohio/springfield|
 
 
 
