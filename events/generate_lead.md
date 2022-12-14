@@ -12,7 +12,7 @@ window.dataLayer.push({
     "currency": "<currency>",
     "category": "<category>",
     "value": "<value>",
-    franchise_id: '<franchise_id>'
+    "office_id": '<office_id>'
   }
 })
 ```
@@ -24,4 +24,4 @@ window.dataLayer.push({
 |USD|
 |category|string|recommended|A human-readible identifier whose purpose will vary by event, but generally is used to group things (forms, links, videos) into loose assocations based upon shared characteristics. If running low on custom dimensions, you may combine multiple categories together in this field, separated by greater than (>) or slash (/). See https://schema.org/category.|qualified|
 |value|number|recommended|For the "purchase" event this is the total revenue after coupons, but before tax and shipping.|100|
-|franchise_id|integer|optional|Set on all events that can be tied back to a franchise.|143, 576, 1134|
+|office_id|string|optional|Set on all events that can be tied back to an office.|/ohio/springfield|
