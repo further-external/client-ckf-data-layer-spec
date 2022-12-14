@@ -20,7 +20,7 @@ window.dataLayer.push({
     "page_category4": "<page_category4>",
     "page_category5": "<page_category5>",
     "page_id": "<page_id>",
-    "franchise_id": "<franchise_id>",
+    "office_id": '<office_id>',
     "language": "<language>",
     "page_name": "<page_name>",
     "page_location": "<page_location>",
@@ -52,6 +52,7 @@ window.dataLayer.push({
 |page_category4|string|optional|page_category2 through page_category5 can be used to break down category if additional detail is needed and you have space for more custom dimensions|Category 4|
 |page_category5|string|optional|page_category2 through page_category5 can be used to break down category if additional detail is needed and you have space for more custom dimensions|Category 5|
 |page_id|string|recommended||12345|
+
 |page_name|string|optional|The page name originally developed for Adobe Analytics.|Take-a-Deep-Breath:-Stress-Relief-Techniques-for-Seniors|
 |page_location|string|required|The full URL of the page. Equivalent to document.location.href.|https://www.comfortkeepers.com/articles/info-center/senior-health-and-wellbeing/take-a-deep-breath-stress-relief-techniques-for-se|
 |page_referrer|string|required|The page referrer. Equivalent to document.referrrer.|https://www.google.com|
@@ -62,6 +63,7 @@ window.dataLayer.push({
 |site_section4|string|optional||Section 4|
 |site_section5|string|optional||Section 5|
 |@type|string|recommended|The schema.org type for this event. For instance, for a page_view event, the page being viewed is a WebPage, but it could also be a more specific subtype like AboutPage or event a custom type your organization creates such as HomePage. Differs from type in that "@type" always should be populated with a schema.org type, while "type" can be populated with arbitrary values.|AboutPage, CheckoutPage, CollectionPage, ArticlePage|
+|office_id|string|optional|Set on all events that can be tied back to an office.|/ohio/springfield|
 |vendor_keys|object|optional|An object with key-value pairs for vendor keys that might be needed in GTM. E.g, Paradox|
 
 
