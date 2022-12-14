@@ -17,7 +17,7 @@ dataLayer.push({
     video_title: '<video_title>',
     video_url: '<video_url>',
     visible: '<visible>',
-    franchise_id: '<franchise_id>'
+    "office_id": '<office_id>'
   }
 });
 ```
@@ -33,4 +33,4 @@ dataLayer.push({
 |video_title|string|required|The title of the video.|Walkthrough of the Google Analytics 4 User Interface|
 |video_url|string|required|The URL of the video.|https://youtu.be/RhS85WQiBLU|
 |visible|boolean|required|Is the video visible on the page.|true|
-|franchise_id|integer|optional|Set on all events that can be tied back to a franchise.|143, 576, 1134|
+|office_id|string|optional|Set on all events that can be tied back to an office.|/ohio/springfield|
