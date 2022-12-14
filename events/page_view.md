@@ -61,8 +61,7 @@ window.dataLayer.push({
 |site_section3|string|optional||Senior Health and Wellbeing|
 |site_section4|string|optional||Section 4|
 |site_section5|string|optional||Section 5|
-|@type|string|recommended|The schema.org type for this event. For instance, for a page_view event, the page being viewed is a WebPage, but it could also be a more specific subtype like AboutPage or event a custom type your organization creates such as HomePage. Differs from type in that "@type" always should be populated with a schema.org type, while "type" can be populated with arbitrary values.|AboutPage, CheckoutPage, CollectionPage, ArticlePage
-|
+|@type|string|recommended|The schema.org type for this event. For instance, for a page_view event, the page being viewed is a WebPage, but it could also be a more specific subtype like AboutPage or event a custom type your organization creates such as HomePage. Differs from type in that "@type" always should be populated with a schema.org type, while "type" can be populated with arbitrary values.|AboutPage, CheckoutPage, CollectionPage, ArticlePage|
 |vendor_keys|object|optional||An object with key-value pairs for vendor keys that might be needed in GTM. E.g, Paradox|
 
 
