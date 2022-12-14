@@ -18,7 +18,7 @@ window.dataLayer.push({
     "job_location": "<job_location>",
     "title": "<title>",
     "@type": "<@type>",
-    office_id: '<office_id>'
+    "office_id": '<office_id>'
   }
 })
 ```
