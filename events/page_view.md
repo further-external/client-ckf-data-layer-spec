@@ -33,7 +33,7 @@ window.dataLayer.push({
     "site_section5": "<site_section5>",
     "@type": "<@type>",
     "vendor_keys" : {
-      "paradox_setkey: "<setkey>",
+      "paradox_setkey": "<setkey>",
       ...
     }
   }
