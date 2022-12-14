@@ -52,7 +52,6 @@ window.dataLayer.push({
 |page_category4|string|optional|page_category2 through page_category5 can be used to break down category if additional detail is needed and you have space for more custom dimensions|Category 4|
 |page_category5|string|optional|page_category2 through page_category5 can be used to break down category if additional detail is needed and you have space for more custom dimensions|Category 5|
 |page_id|string|recommended||12345|
-
 |page_name|string|optional|The page name originally developed for Adobe Analytics.|Take-a-Deep-Breath:-Stress-Relief-Techniques-for-Seniors|
 |page_location|string|required|The full URL of the page. Equivalent to document.location.href.|https://www.comfortkeepers.com/articles/info-center/senior-health-and-wellbeing/take-a-deep-breath-stress-relief-techniques-for-se|
 |page_referrer|string|required|The page referrer. Equivalent to document.referrrer.|https://www.google.com|
