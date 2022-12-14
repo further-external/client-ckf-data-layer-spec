@@ -44,7 +44,7 @@ window.dataLayer.push({
 |Field|Type|Required|Description|Example|Pattern|Min Length|Max Length|Minimum|Maximum|Multiple Of|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |breadcrumb|string|optional|The breadcrumb heirarchy of the page, separated by greater than (>) or slash (/).|Home>Care Services>Glossary|
-|franchise_id|string|recommended|A unique identifier for the franchise this page is associated with|1078|
+|office_id|string|optional|Set on all events that can be tied back to an office.|/ohio/springfield|
 |language|string|required|The language of the page, usually retrieved from the `<html>` tag on the page|en|
 |page_category|string|recommended|A human-readible used to group pages into clusters. If running low on custom dimensions, you may combine multiple categories together in this field, separated by greater than (>) or slash (/). See https://schema.org/category.|Senior Health & Wellbeing, Seniors and Nutrition|
 |page_category2|string|optional|page_category2 through page_category5 can be used to break down category if additional detail is needed and you have space for more custom dimensions|Stress Relief|
