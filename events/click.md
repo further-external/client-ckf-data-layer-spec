@@ -30,7 +30,7 @@ window.dataLayer.push({
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |category|string|optional|A human-readible identifier whose purpose will vary by event, but generally is used to group things (forms, links, videos) into loose assocations based upon shared characteristics. If running low on custom dimensions, you may combine multiple categories together in this field, separated by greater than (>) or slash (/). See https://schema.org/category.||
 |component_ancestry|string|optional|A hierarchical list of all components that a link is contained within|main>hero>cta-box|
-|identifier|string|optional|A unique machine-readible identifier whose purpose will vary by event, but generally is used to differentiate one "thing" (form, link, video) from another. See https://schema.org/identifier.|unique-identifier|
+|identifier|string|optional|A unique machine-readible identifier whose purpose will vary by event, but generally is used to differentiate one "thing" (form, link, video) from another. See https://schema.org/identifier.|unique-identifier| CTA for links containing a CTA.
 |link_cta|string|optional|The name of the CTA for identified key CTA links.|job_application_start|
 |link_url|string|required|The HREF of the link interacted with.|https://www.comfortkeepers.com/download.pdf|
 |link_id|string|required|The HTML ID of the link interacted with.|html-id-goes-here|
