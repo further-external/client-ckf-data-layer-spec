@@ -5,13 +5,13 @@ The data-layer-event attribute should be dynamically updated from collapse_accor
 ## HTML Data Attributes
 
 ```html
-<a href="<href>" //Keep the original href attribute
+<a href="<href>" 
   data-layer-event="expand_accordion" 
-  data-layer-identifier="<identifier>" //The computer-readable machine name of the accordion. Use UUID provided by the component
-  data-layer-section-name="<name>"//The name of the section. Ex: Filter Search Results
-  data-layer-heading="<heading>" //The text heading of the accordion item that was opened/closed Ex. Category
-  data-layer-index="<index>" //The ordinal slot number of the accordion item. E.g. - the top item in the accordion will be slot 1. (1-indexed)
-  data-layer-type="<type>"//The type of accordion. Ex: regions_side_nav
+  data-layer-identifier="<identifier>"
+  data-layer-section-name="<section-name>"
+  data-layer-heading="<heading>" 
+  data-layer-index="<index>" 
+  data-layer-type="<type>"
 ></a>
 ```
 
@@ -19,5 +19,10 @@ The data-layer-event attribute should be dynamically updated from collapse_accor
 
 |Field|Type|Required|Description|Example|Pattern|Min Length|Max Length|Minimum|Maximum|Multiple Of|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|component|string|required|The name of the component|Carousel:Wrapper|
-
+|href|string|required|Keep the original href attribute||
+|event|string|required|expand_accordion or collapse_accordion||
+|identifier|string|required|The computer-readable machine name of the accordion. Use UUID provided by the component||
+|section-name|string|required|The name of the section|Side nav filter search results|
+|heading|string|required|The text heading of the accordion item that was opened/closed|Category|
+|index|string|required|The ordinal slot number of the accordion item|the top item in the accordion will be slot 1. (1-indexed)|
+|type|string|required|The type of accordion|regions_side_nav|
