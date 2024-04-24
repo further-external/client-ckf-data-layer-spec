@@ -41,6 +41,7 @@ Content-Type: application/json
           }
      }]
 }
+```
 
 ## Variable Definitions
 
