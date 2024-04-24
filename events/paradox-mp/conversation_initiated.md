@@ -1,7 +1,7 @@
 ##This event should fire when the user starts a conversation with Olivia Assistan.
 
 ## Request info
-POST /mp/collect?api_secret=fKhnzB9URSqghrauTtjGMw&measurement_id=G-0KV060Y1BE HTTP/1.1 //Using Staging properties values
+POST /mp/collect?api_secret=fKhnzB9URSqghrauTtjGMw&measurement_id=G-0KV060Y1BE HTTP/1.1   ##Using Staging properties values
 HOST: www.google-analytics.com
 Content-Type: application/json
 
