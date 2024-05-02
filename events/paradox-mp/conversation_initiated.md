@@ -57,6 +57,9 @@ Content-Type: application/json
 |method|string|recommended|The method by which a user is applying|webform,phone,chat|
 |office_id|string|optional|Set on all events that can be tied back to an office.|/ohio/springfield|
 |date_posted|string|recommended|Publication date of an online listing. See https://schema.org/datePosted.|44594|
+|employment_type|string|recommended|The type of job for the position.|Part Time/Full Time|
 |description|string|recommended|A description of the item. See https://schema.org/description.|Here at Comfort Keepers of Atlanta, GA our expert caregivers provide a personalized in-home care experience for seniors and disabled individuals to remain independent and comfortable in their own homes. Comfort Keepers uses Interactive Caregiving to ensure our clients are receiving the best care possible.\n\nLearn more on how our Comfort Keepers In-home Caregivers are bringing comfort to home while providing companionship, respite care, and more.\n\nOur team is dedicated to caring for seniors and loved ones within their homes and ensuring their safety during everyday outings and errands.|
+|sha256_first_name|string|required|The Hashed and encoded first name of the user.|916b1f01b7d7c08d6a19905fa9eea0fa34289ccf0c0b0e29d523fc57b78283cc|
+
 
 
