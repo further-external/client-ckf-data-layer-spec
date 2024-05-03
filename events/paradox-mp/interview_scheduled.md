@@ -1,4 +1,4 @@
-# Conversation Initiated
+# Interview Scheduled
 
 Fire when a candidate user selects one of the time slots options and confirms
 
