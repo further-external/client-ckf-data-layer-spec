@@ -1,5 +1,8 @@
-# Page View
+# Page Load Started
 
+### 
+
+## Javascript Code
 Fire whenever a user loads in a new page, whether that is done synchronously or asynchronously.
 
 This event should be the first pushed into the data layer on each page. Given many 3rd party scripts push events to the data layer, this event push should be placed in the page `<head>` and should be the first `<script>` tag on the page to ensure it is the first event.
@@ -12,6 +15,7 @@ window.dataLayer = window.dataLayer || []; // Initialize the dataLayer variable 
 window.dataLayer.push({page_data: null}) // conditionally reset portions of DL 
 window.dataLayer.push({
   "event": "page_view",
+  "detailed_event": "Page Load Started",
   "page_data": {
     "breadcrumb": "<breadcrumb>",
     "page_category": "<page_category>",
@@ -63,6 +67,11 @@ window.dataLayer.push({
 |site_section5|string|optional||Section 5|
 |@type|string|recommended|The schema.org type for this event. For instance, for a page_view event, the page being viewed is a WebPage, but it could also be a more specific subtype like AboutPage or event a custom type your organization creates such as HomePage. Differs from type in that "@type" always should be populated with a schema.org type, while "type" can be populated with arbitrary values.|AboutPage, CheckoutPage, CollectionPage, ArticlePage|
 |vendor_keys|object|optional|An object with key-value pairs for vendor keys that might be needed in GTM. E.g, Paradox|
+
+
+## Attached Notes
+
+<p>This is information about the page.&nbsp; We will want to fire the events in this sequence.<br />Page Load Started &gt; Page Load Completed</p>
 
 
 
