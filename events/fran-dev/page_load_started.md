@@ -45,7 +45,7 @@ window.dataLayer.push({
 
 ## Attached Notes
 
-<p>This is information about the page.&nbsp; We will want to fire the events in this sequence.<br />Page Load Started &gt; User Detected &gt; Page Load Completed</p>
+<p>This is information about the page.&nbsp; We will want to fire the events in this sequence.<br />Page Load Started &gt; Page Load Completed</p>
 
 
 
