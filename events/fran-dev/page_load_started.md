@@ -1,4 +1,4 @@
-# Page View
+# Page Load Started
 
 Fire whenever a user loads in a new page, whether that is done synchronously or asynchronously.
 
@@ -11,7 +11,8 @@ There is no longer a concept of virtual page view, so this event should be fired
 window.dataLayer = window.dataLayer || []; // Initialize the dataLayer variable to avoid JS errors
 window.dataLayer.push({page_data: null}) // conditionally reset portions of DL 
 window.dataLayer.push({
-  "event": "page_view",
+  "event": "page_load_started",
+  "detailed_event": "Page Load Started",
   "page_data": {
     "breadcrumb": "<breadcrumb>",
     "page_category": "<page_category>",
@@ -42,6 +43,10 @@ window.dataLayer.push({
 |page_title|string|required|The page title. Generally set to the HTML <title> tag.|Take a Deep Breath: Stress Relief Techniques for Seniors | Comfort Keepers|
 |site_section|string|required|Set on all events with a value which designates what portion (i.e., section) the visitor is on.  Previously the "channel" in Adobe Analytics.|Article Library|
 |@type|string|required|The schema.org type for this event. For instance, for a page_view event, the page being viewed is a WebPage, but it could also be a more specific subtype like AboutPage or event a custom type your organization creates such as HomePage. Differs from type in that "@type" always should be populated with a schema.org type, while "type" can be populated with arbitrary values.|AboutPage, CheckoutPage, CollectionPage, ArticlePage|
+
+## Attached Notes
+
+<p>This is information about the page.&nbsp; We will want to fire the events in this sequence.<br />Page Load Started &gt; User Detected &gt; Page Load Completed</p>
 
 
 
