@@ -26,7 +26,6 @@ window.dataLayer.push({
     "site_section": "<site_section>",
     "@type": "<@type>"
     }
-  }
 })
 ```
 
