@@ -11,8 +11,8 @@ There is no longer a concept of virtual page view, so this event should be fired
 window.dataLayer = window.dataLayer || []; // Initialize the dataLayer variable to avoid JS errors
 window.dataLayer.push({page_data: null}) // conditionally reset portions of DL 
 window.dataLayer.push({
-  "event": "page_load_started",
   "detailed_event": "Page Load Started",
+  "event": "page_load_started",
   "page_data": {
     "breadcrumb": "<breadcrumb>",
     "page_category": "<page_category>",
