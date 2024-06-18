@@ -4,10 +4,10 @@
 
 ## Javascript Code
 ```js
-window.dataLayer = window.dataLayer || []; // Initialize the dataLayer variable to avoid JS errors
-window.dataLayer.push({
-  "event": "page_view",
-  "detailed_event": "Page Load Completed"
+window.dataLayer = window.dataLayer || [];
+dataLayer.push({
+  "detailed_event": "Page Load Completed",
+  "event": "page_view"
 });
 ```
 
