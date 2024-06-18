@@ -1,4 +1,4 @@
-# Form View
+# Form Viewed
 
 Fire whenever a user is presented with a form on a page.
 
@@ -12,11 +12,12 @@ This could be done with data attributes and detected via GTM at DOM Ready, but i
 window.dataLayer = window.dataLayer || [];
 dataLayer.push({ event_data: null });  // Clear the previous event_data object.
 dataLayer.push({
-  event: 'form_view',
-  event_data: {
-    category: '<category>',
-    identifier: '<identifier>',
-    name: '<name>'
+  "detailed_event": "Form Viewed",
+  "event": "form_view",
+  "event_data": {
+    "category": "<category>",
+    "identifier": "<identifier>",
+    "name": "<name>"
   }
 });
 ```
@@ -25,7 +26,7 @@ dataLayer.push({
 
 |Field|Type|Required|Description|Example|Pattern|Min Length|Max Length|Minimum|Maximum|Multiple Of|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|category|string|recommended|A human-readible identifier whose purpose will vary by event, but generally is used to group things (forms, links, videos) into loose assocations based upon shared characteristics. If running low on custom dimensions, you may combine multiple categories together in this field, separated by greater than (>) or slash (/). See https://schema.org/category.|Job Application|
-|identifier|string|recommended|The form machine-readable name. This should be a unique value specific to this form, if one exists. If one does not exist, this can also be populated with the same value as the <name>.|form-12345|
+|category|string|required|A human-readible identifier whose purpose will vary by event, but generally is used to group things (forms, links, videos) into loose assocations based upon shared characteristics. If running low on custom dimensions, you may combine multiple categories together in this field, separated by greater than (>) or slash (/). See https://schema.org/category.|Job Application|
+|identifier|string|required|The form machine-readable name. This should be a unique value specific to this form, if one exists. If one does not exist, this can also be populated with the same value as the <name>.|form-12345|
 |name|string|required|The form human-readable name. This should be something that an analyst without a deep knowledge of the technical implementation of the site can easily identify the form with. It should be lowercase snake_case.|Caregiver 1078 Application
 
