@@ -2,6 +2,8 @@
 
 Fire this event the user enters a City, State or Zip Code and the list of results is displayed. 
 
+NOTE: Fire this event on pages where this feature is available(Find location widget, hamburger menu(responsive)
+
 
 ## Javascript Code
 ```js
