@@ -3,7 +3,7 @@
 ### 
 
 ## Javascript Code
-Fire whenever a user loads in a new page, whether that is done synchronously or asynchronously.
+Fire whenever a user starts to load a new page, whether that is done synchronously or asynchronously.
 
 This event should be the first pushed into the data layer on each page. Given many 3rd party scripts push events to the data layer, this event push should be placed in the page `<head>` and should be the first `<script>` tag on the page to ensure it is the first event.
 
