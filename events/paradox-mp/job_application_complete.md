@@ -1,4 +1,4 @@
-# Candidate Form Complete
+# Application Complete
 
 Fire when the candidate succesfully completes the Caregiver form.
 
@@ -14,8 +14,8 @@ Content-Type: application/json
   "client_id":"<client_id>",
   "timestamp_micros":"<timestamp_micros>",
       "events":[{
-          "name":"candidate_form_complete",
-          "detailed_event": "Candidate Form Complete",
+          "name":"job_application_complete",
+          "detailed_event": "Application Complete",
           "params":
           {
             "session_id": "<session_id>",
