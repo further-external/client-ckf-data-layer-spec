@@ -15,7 +15,7 @@ Content-Type: application/json
   "client_id":"<client_id>",
   "timestamp_micros":"<timestamp_micros>",
       "events":[{
-          "name":"hire_candidate",
+          "name":"job_candidate_hire",
           "detailed_event": "Hire Candidate",
           "params":
           {
