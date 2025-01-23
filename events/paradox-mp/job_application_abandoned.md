@@ -1,6 +1,7 @@
-# Interview Scheduled
+# Job Application Abandoned
 
-Fire when a candidate user selects one of the time slots options and confirms
+Fire when the candidate hring process is complete and the candidate is ready to accept the first shift.
+
 
 ## Request info
 POST /mp/collect?api_secret=fKhnzB9URSqghrauTtjGMw&measurement_id=G-0KV060Y1BE HTTP/1.1   ##Using Staging properties values
@@ -14,8 +15,8 @@ Content-Type: application/json
   "client_id":"<client_id>",
   "timestamp_micros":"<timestamp_micros>",
       "events":[{
-          "name":"interview_scheduled",
-          "detailed_event": "Interview Scheduled",
+          "name":"job_application_abandoned",
+          "detailed_event": "Job Application Abandoned",
           "params":
           {
             "session_id": "<session_id>",
