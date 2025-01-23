@@ -15,7 +15,7 @@ Content-Type: application/json
   "client_id":"<client_id>",
   "timestamp_micros":"<timestamp_micros>",
       "events":[{
-          "name":"offer_accepted",
+          "name":"job_offer_accepted",
           "detailed_event": "Offer Accepted",
           "params":
           {
