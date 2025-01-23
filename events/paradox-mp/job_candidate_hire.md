@@ -16,7 +16,7 @@ Content-Type: application/json
   "timestamp_micros":"<timestamp_micros>",
       "events":[{
           "name":"job_candidate_hire",
-          "detailed_event": "Hire Candidate",
+          "detailed_event": "Job Candidate Hire",
           "params":
           {
             "session_id": "<session_id>",
