@@ -27,6 +27,7 @@ Content-Type: application/json
   "events": [
     {
       "name": "qualify_lead",
+      "detailed_event": "Franconnect Qualify Lead",
       "params": {
         "franconnect_lead_id": "<hashed_franconnect_lead_id>",
         "qualification_timestamp": "<qualification_timestamp_micros>"
