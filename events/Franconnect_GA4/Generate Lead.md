@@ -4,7 +4,7 @@ Fire when a successful submit of form is being received.
 
 
 ## Request info
-POST /mp/collect?api_secret="insert_secret_key"&measurement_id=G-3BQ5YPKFRC HTTP/1.1   ##Using Staging properties values
+POST /mp/collect?api_secret="insert_secret_key"&measurement_id=G-3BQ5YPKFRC HTTP/1.1   
 HOST: www.google-analytics.com
 Content-Type: application/json
 
@@ -12,36 +12,34 @@ Content-Type: application/json
 
 ```js
 {
-  "client_id":"<client_id>",
-  "timestamp_micros":"<timestamp_micros>",
-      "events":[{
-          "name":"generate_lead",
-          "detailed_event": "Generate Lead",
-          "params":
-          {
-            "session_id": "<session_id>",
-            "engagement_time_msec": "<engagement_time_msec>",
-            "franconnect_lead_id": "<hashed_franconnect_lead_id>",
-            "lead_source": "Franconnect",
-            "utm_source": "<franconnect_utm_source>",
-            "utm_medium": "<franconnect_utm_medium>",
-            "utm_campaign": "<franconnect_utm_campaign>",
-            "is_international": "<franconnect_is_international>"
-
-            }],
-           "user_data": [{
-               "sha256_first_name": "<hashed_user_first_name>",
-               "sha256__last_name": "<hashed_user_last_name>",
-               "sha256_user_email": "<hashed_user_email>",
-               "sha256_user_phone_number": "<hashed_user_phone_number>",
-               "sha256_street": "<hashed_street>",
-               "sha256_city": "hashed_city",
-               "sha256_region": "<hashed_region>",
-               "sha256_postal_code": "<hashed_postal_code>",
-               "sha256_country": "<hashed_country>"
-            }]
-          }
-     }]
+  "client_id": "<client_id>",
+  "timestamp_micros": "<timestamp_micros>",
+  "user_data": {
+    "sha256_first_name": "<hashed_user_first_name>",
+    "sha256_last_name": "<hashed_user_last_name>",
+    "sha256_user_email": "<hashed_user_email>",
+    "sha256_user_phone_number": "<hashed_user_phone_number>",
+    "sha256_street": "<hashed_street>",
+    "sha256_city": "<hashed_city>",
+    "sha256_region": "<hashed_region>",
+    "sha256_postal_code": "<hashed_postal_code>",
+    "sha256_country": "<hashed_country>"
+  },
+  "events": [
+    {
+      "name": "generate_lead",
+      "params": {
+        "session_id": "<session_id>",
+        "engagement_time_msec": "<engagement_time_msec>",
+        "franconnect_lead_id": "<hashed_franconnect_lead_id>",
+        "lead_source": "Franconnect",
+        "utm_source": "<franconnect_utm_source>",
+        "utm_medium": "<franconnect_utm_medium>",
+        "utm_campaign": "<franconnect_utm_campaign>",
+        "is_international": "<franconnect_is_international>"
+      }
+    }
+  ]
 }
 ```
 
@@ -49,28 +47,28 @@ Content-Type: application/json
 
 |Field|Type|Required|Description|Example|Pattern|Min Length|Max Length|Minimum|Maximum|Multiple Of|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|api_secret|string|required|The API secret for the property to send the event to.|fKhnzB9URSqghrauTtjGMw|
-|measurement_id|string|required|The identifier for the data stream to send the event to.|G-0KV060Y1BE|
-|client_id|string|required|The unique identifier for an instance of a web client.|1704286278|
-|timestamp_micros|string|required|The timestamp of the event in microsonds|1713872747|
-|session_id|string|required|The unique identifier for a given session.|1714677480|
-|engagement_time_msec|string|required|The amount of time someone spends with application in the foreground.|11586|
-|identifier|string|recommended|A unique machine-readible identifier whose purpose will vary by event, but generally is used to differentiate one "thing" (form, link, video) from another. See https://schema.org/identifier.|ckfi:56f9dd7d-80e6-445c-b638-4e1759789077|
-|method|string|recommended|The method by which a user is applying|webform,phone,chat|
-|office_id|string|optional|Set on all events that can be tied back to an office.|/ohio/springfield|
-|date_posted|string|recommended|Publication date of an online listing. See https://schema.org/datePosted.|44594|
-|employment_type|string|recommended|The type of job for the position.|Part Time/Full Time|
-|description|string|recommended|A description of the item. See https://schema.org/description.|Here at Comfort Keepers of Atlanta, GA our expert caregivers provide a personalized in-home care experience for seniors and disabled individuals to remain independent and comfortable in their own homes. Comfort Keepers uses Interactive Caregiving to ensure our clients are receiving the best care possible.\n\nLearn more on how our Comfort Keepers In-home Caregivers are bringing comfort to home while providing companionship, respite care, and more.\n\nOur team is dedicated to caring for seniors and loved ones within their homes and ensuring their safety during everyday outings and errands.|
-|sha256_first_name|string|required|The Hashed and encoded first name of the user.|916b1f01b7d7c08d6a19905fa9eea0fa34289ccf0c0b0e29d523fc57b78283cc|
-|sha256_last_name|string|required|Hashed and encoded last name of the user.|10eb1eee807536048c3b55f44cc5fe82ae6ab3c4fa89226758a41d02bd53e5d2|
-|sha256_email_address|string|required|Hashed and encoded email address of the user.|c90b8279a7042d9d6342bdf1d71699814111d8dc95b9e030e4dbb8d186b41a6f|
-|sha256_street|string|required|Hashed and encoded street and number of the user.|d96546c4c670d8742647c66dd9ad232638cafe4ee10d711d4d45ad20f6b3c7fa|
-|sha256_phone_number|string|required|Hashed and encoded phone number of the user.|048140ceb8abc7e186e47e3ae374d63897c85b19f710dd88e89a5394b2576f9d|
-|sha256_street|string|required|Hashed and encoded street and number of the user.|c044f5159556b36e967305141d35bc10076a01f0b2f8339e85ba11785cff19c3|
-|sha256_city|string|required|City for the address of the user.|c55ec4bbe9c7c1614204f286194b109010ca0680f41325ec1a82302a34b4f3f7|
-|sha256_region|string|required|State or territory for the address of the user.|8e9e26c2ef86ecd02ba5c84da8a0859a39b4181b19f4c89312d6f1c1b78ccf15|
-|sha256_postal_code|string|required|Postal code for the address of the user.|a187be7bb4885205afe3ba3b3ddc549693035523bcf9a48bdb10ce920200f15e|
-|sha256_country|string|required|Country code for the address of the user.|aa5ab35a9174c2062b7f7697b33fafe5ce404cf5fecf6bfbbf0dc96ba0d90046|
+|`api_secret`|string|required|The API secret for the GA4 property. Found in GA4 Admin: Data Streams > Measurement Protocol API secrets. Must be kept confidential.|`fKhnzB9URSqghrauTtjGMw`|||||||
+|`measurement_id`|string|required|The identifier for the GA4 data stream. Found in GA4 Admin: Data Streams.|`G-3BQ5YPKFRC`|||||||
+|`client_id`|string|required|Unique identifier for a user/client instance. Essential for linking offline events to online user activity. Typically retrieved from the `_ga` cookie or server-side GTM. Needs to be associated with the Franconnect lead.|`1704286278.1678886400`|||||||
+|`timestamp_micros`|string|required|Timestamp of the event in Unix epoch microseconds. Highly recommended for accurate event ordering. GA4 accepts events up to 72 hours old. Needs conversion from Franconnect timestamp.|`1713872747000000`|||||||
+|`events[].name`|string|required|Name of the event being sent. Must match GA4 recommended or custom event names. Max 40 chars, alphanumeric & underscores, start with letter[cite: 92, 93].|`generate_lead`|`^[a-zA-Z][a-zA-Z0-9_]*$`||40||||
+|`events[].params.session_id`|string|recommended|The unique identifier for the session associated with the event. Enhances session attribution. Can be retrieved from `_ga_<measurement_id>` cookie.|`1714677480`|||100||||
+|`events[].params.engagement_time_msec`|string|recommended|Time the application was in the foreground (milliseconds).|`11586`|||100||||
+|`events[].params.franconnect_lead_id`|string|required|Hashed unique identifier for the lead in Franconnect. Hashing (SHA-256 recommended) enhances privacy. Derived from Franconnect `referenceId`. Max 100 chars for value[cite: 94].|`<hashed_franconnect_lead_id>`|||100||||
+|`events[].params.lead_source`|string|required|Source system where the lead originated. Indicates the event data comes from Franconnect. Max 100 chars for value[cite: 94].|`Franconnect`|||100||||
+|`events[].params.utm_source`|string|optional|UTM source parameter associated with the lead in Franconnect. Populated from Franconnect lead data. Max 100 chars for value[cite: 94].|`<franconnect_utm_source>`|||100||||
+|`events[].params.utm_medium`|string|optional|UTM medium parameter associated with the lead in Franconnect. Populated from Franconnect lead data. Max 100 chars for value[cite: 94].|`<franconnect_utm_medium>`|||100||||
+|`events[].params.utm_campaign`|string|optional|UTM campaign parameter associated with the lead in Franconnect. Populated from Franconnect lead data. Max 100 chars for value[cite: 94].|`<franconnect_utm_campaign>`|||100||||
+|`events[].params.is_international`|boolean|optional|Indicates if the lead is international. Mapped from Franconnect 'International Lead' status/field. Max 100 chars for value[cite: 94].|`true`|||100||||
+|`user_data.sha256_first_name`|string|recommended|SHA-256 Hashed first name of the user. Required if sending PII. Max 100 chars[cite: 94].|`916b1f...83cc`|`^[a-fA-F0-9]{64}$`|64|64||||
+|`user_data.sha256_last_name`|string|recommended|SHA-256 Hashed last name of the user. Required if sending PII. Max 100 chars[cite: 94].|`10eb1e...5d2`|`^[a-fA-F0-9]{64}$`|64|64||||
+|`user_data.sha256_user_email`|string|recommended|SHA-256 Hashed email address of the user. Required if sending PII. Max 100 chars[cite: 94].|`c90b82...1a6f`|`^[a-fA-F0-9]{64}$`|64|64||||
+|`user_data.sha256_user_phone_number`|string|recommended|SHA-256 Hashed phone number of the user. Required if sending PII. Max 100 chars[cite: 94].|`048140...76f9d`|`^[a-fA-F0-9]{64}$`|64|64||||
+|`user_data.sha256_street`|string|recommended|SHA-256 Hashed street address of the user. Required if sending PII. Max 100 chars[cite: 94].|`d96546...3c7fa`|`^[a-fA-F0-9]{64}$`|64|64||||
+|`user_data.sha256_city`|string|recommended|SHA-256 Hashed city of the user. Required if sending PII. Max 100 chars[cite: 94].|`c55ec4...f3f7`|`^[a-fA-F0-9]{64}$`|64|64||||
+|`user_data.sha256_region`|string|recommended|SHA-256 Hashed state/region of the user. Required if sending PII. Max 100 chars[cite: 94].|`8e9e26...8ccf15`|`^[a-fA-F0-9]{64}$`|64|64||||
+|`user_data.sha256_postal_code`|string|recommended|SHA-256 Hashed postal code of the user. Required if sending PII. Max 100 chars[cite: 94].|`a187be...0f15e`|`^[a-fA-F0-9]{64}$`|64|64||||
+|`user_data.sha256_country`|string|recommended|SHA-256 Hashed country code of the user. Required if sending PII. Max 100 chars[cite: 94].|`aa5ab3...0046`|`^[a-fA-F0-9]{64}$`|64|64||||
 
 
 
