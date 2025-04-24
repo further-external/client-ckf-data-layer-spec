@@ -27,6 +27,7 @@ Content-Type: application/json
   "events": [
     {
       "name": "working_lead",
+      "detailed_event": "Franconnect Working Lead",
       "params": {
         "franconnect_lead_id": "<hashed_franconnect_lead_id>",
         "working_timestamp": "<working_timestamp_micros>",
