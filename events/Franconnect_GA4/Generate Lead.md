@@ -4,7 +4,7 @@ Fire when a successful submit of form is being received.
 
 
 ## Request info
-POST /mp/collect?api_secret=fKhnzB9URSqghrauTtjGMw&measurement_id=G-0KV060Y1BE HTTP/1.1   ##Using Staging properties values
+POST /mp/collect?api_secret="insert_secret_key"&measurement_id=G-3BQ5YPKFRC HTTP/1.1   ##Using Staging properties values
 HOST: www.google-analytics.com
 Content-Type: application/json
 
@@ -15,18 +15,19 @@ Content-Type: application/json
   "client_id":"<client_id>",
   "timestamp_micros":"<timestamp_micros>",
       "events":[{
-          "name":"job_application_abandoned",
-          "detailed_event": "Job Application Abandoned",
+          "name":"generate_lead",
+          "detailed_event": "Generate Lead",
           "params":
           {
             "session_id": "<session_id>",
             "engagement_time_msec": "<engagement_time_msec>",
-            "job_data": [{
-                "identifier": "<identifier>",
-                "method": "<method>",
-                "office_id": "<franchise_id>",
-                "date_posted": "<date_posted>",
-                "employment_type": "<employment_type>"
+            "franconnect_lead_id": "<hashed_franconnect_lead_id>",
+            "lead_source": "Franconnect",
+            "utm_source": "<franconnect_utm_source>",
+            "utm_medium": "<franconnect_utm_medium>",
+            "utm_campaign": "<franconnect_utm_campaign>",
+            "is_international": "<franconnect_is_international>"
+
             }],
            "user_data": [{
                "sha256_first_name": "<hashed_user_first_name>",
