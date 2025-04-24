@@ -28,6 +28,7 @@ Content-Type: application/json
   "events": [
     {
       "name": "generate_lead",
+      "detailed_event": "Franconnect Generate Lead",
       "params": {
         "session_id": "<session_id>",
         "engagement_time_msec": "<engagement_time_msec>",
