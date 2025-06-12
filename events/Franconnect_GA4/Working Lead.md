@@ -26,12 +26,11 @@ Content-Type: application/json
   },
   "events": [
     {
-      "name": "working_lead",
-      "detailed_event": "Franconnect Working Lead",
+      "name": "qualify_lead",
       "params": {
         "franconnect_lead_id": "<hashed_franconnect_lead_id>",
-        "working_timestamp": "<working_timestamp_micros>",
-        "call_type": "<franconnect_call_type>"
+        "qualification_timestamp": "<qualification_timestamp_micros>",
+        "detailed_event": "Franconnect Qualify Lead"
       }
     }
   ]
