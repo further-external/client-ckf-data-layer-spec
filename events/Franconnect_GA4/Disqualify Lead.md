@@ -28,11 +28,11 @@ Content-Type: application/json
   "events": [
     {
       "name": "disqualify_lead",
-      "detailed_event": "Franconnect Disqualify Lead",
       "params": {
         "franconnect_lead_id": "<hashed_franconnect_lead_id>",
-        "disqualification_timestamp": "<disqualification_timestamp_micros>"
-        "disqualification_reason": "<disqualification_reason>"
+        "disqualification_timestamp": "<disqualification_timestamp_micros>",
+        "disqualification_reason": "<disqualification_reason>",
+        "detailed_event": "Franconnect Disqualify Lead"
       }
     }
   ]
