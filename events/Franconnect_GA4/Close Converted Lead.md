@@ -28,11 +28,11 @@ Content-Type: application/json
   "events": [
     {
       "name": "close_convert_lead",
-      "detailed_event": "Franconnect Close Convert Lead",
       "params": {
         "franconnect_lead_id": "<hashed_franconnect_lead_id>",
-        "conversion_timestamp": "<conversion_timestamp_micros>"
-        "franchise_contract_value": <franchise_contract_value> 
+        "conversion_timestamp": "<conversion_timestamp_micros>",
+        "franchise_contract_value": <franchise_contract_value>,
+        "detailed_event": "Franconnect Close Convert Lead"
       }
     }
   ]
