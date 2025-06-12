@@ -28,11 +28,11 @@ Content-Type: application/json
   "events": [
     {
       "name": "close_unconvert_lead",
-      "detailed_event": "Franconnect Close Unconvert Lead",
       "params": {
         "franconnect_lead_id": "<hashed_franconnect_lead_id>",
         "unconversion_timestamp": "<unconversion_timestamp_micros>",
-        "unconversion_reason": "<unconversion_reason>"
+        "unconversion_reason": "<unconversion_reason>",
+        "detailed_event": "Franconnect Close Unconvert Lead"
       }
     }
   ]
