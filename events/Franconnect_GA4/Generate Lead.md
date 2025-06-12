@@ -28,7 +28,6 @@ Content-Type: application/json
   "events": [
     {
       "name": "generate_lead",
-      "detailed_event": "Franconnect Generate Lead",
       "params": {
         "session_id": "<session_id>",
         "engagement_time_msec": "<engagement_time_msec>",
@@ -37,7 +36,8 @@ Content-Type: application/json
         "utm_source": "<franconnect_utm_source>",
         "utm_medium": "<franconnect_utm_medium>",
         "utm_campaign": "<franconnect_utm_campaign>",
-        "is_international": "<franconnect_is_international>"
+        "is_international": "<franconnect_is_international>",
+        "detailed_event": "Franconnect Generate Lead"
       }
     }
   ]
