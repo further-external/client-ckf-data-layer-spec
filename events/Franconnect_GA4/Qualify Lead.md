@@ -24,13 +24,13 @@ Content-Type: application/json
     "sha256_postal_code": "<hashed_postal_code>",
     "sha256_country": "<hashed_country>"
   },
-  "events": [
+ "events": [
     {
       "name": "qualify_lead",
-      "detailed_event": "Franconnect Qualify Lead",
       "params": {
         "franconnect_lead_id": "<hashed_franconnect_lead_id>",
-        "qualification_timestamp": "<qualification_timestamp_micros>"
+        "qualification_timestamp": "<qualification_timestamp_micros>",
+        "detailed_event": "Franconnect Qualify Lead"
       }
     }
   ]
