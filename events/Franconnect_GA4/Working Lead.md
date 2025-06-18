@@ -30,6 +30,7 @@ Content-Type: application/json
       "params": {
         "franconnect_lead_id": "<hashed_franconnect_lead_id>",
         "qualification_timestamp": "<qualification_timestamp_micros>",
+        "call_type": "<call_type_>",
         "detailed_event": "Franconnect Qualify Lead"
       }
     }
