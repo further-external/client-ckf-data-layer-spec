@@ -49,3 +49,4 @@ dataLayer.push({
 |user_data.sha256_region|string|recommended|SHA-256 hashed value of the user's region (state or province).||||||||
 |user_data.sha256_postal_code|string|recommended|SHA-256 hashed value of the user's postal code.||||||||
 |user_data.sha256_country|string|recommended|SHA-256 hashed value of the user's country.|US|||||||
+
