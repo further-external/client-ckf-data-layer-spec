@@ -31,10 +31,10 @@ Content-Type: application/json
     {
       "name": "close_convert_lead",
       "params": {
+        "value": <franchise_contract_value>,
+        "currency": "<currency_code>",
         "franconnect_lead_id": "<hashed_franconnect_lead_id>",
         "conversion_timestamp": "<conversion_timestamp_micros>",
-        "franchise_contract_value": <franchise_contract_value>,
-        "currency": "<currency_code>",
         "detailed_event": "Franconnect Close Convert Lead"
       }
     }
@@ -44,26 +44,27 @@ Content-Type: application/json
 
 ## Variable Definitions
 
-|Field|Type|Required|Description|Example|Pattern|Min Length|Max Length|Minimum|Maximum|Multiple Of|
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|`api_secret`|string|required|The API secret for the GA4 property. Found in GA4 Admin: Data Streams > Measurement Protocol API secrets. Must be kept confidential.|`fKhnzB9URSqghrauTtjGMw`|||||||
-|`measurement_id`|string|required|The identifier for the GA4 data stream. Found in GA4 Admin: Data Streams.|`G-3BQ5YPKFRC`|||||||
-|`client_id`|string|required|Unique identifier for a user/client instance. Essential for linking offline events to online user activity. Typically retrieved from the `_ga` cookie or server-side GTM. Needs to be associated with the Franconnect lead.|`1704286278.1678886400`|||||||
-|`timestamp_micros`|string|required|Timestamp of the event in Unix epoch microseconds. Highly recommended for accurate event ordering. GA4 accepts events up to 72 hours old. Needs conversion from Franconnect timestamp.|`1679232000000000`|||||||
-|`events[].name`|string|required|Name of the event being sent. Must match GA4 recommended or custom event names. Max 40 chars, alphanumeric & underscores, start with letter.|`close_convert_lead`|`^[a-zA-Z][a-zA-Z0-9_]*$`||40||||
-|`events[].params.franconnect_lead_id`|string|required|Hashed unique identifier for the lead in Franconnect. Hashing (SHA-256 recommended) enhances privacy. Derived from Franconnect `referenceId`. Max 100 chars for value.|`<hashed_franconnect_lead_id>`|||100||||
-|`events[].params.conversion_timestamp`|string|recommended|Timestamp in Unix epoch microseconds when the lead was converted/awarded. Max 100 chars for value.|`1679232000000`|||100||||
-|`events[].params.franchise_contract_value`|number|optional|The monetary value associated with the franchise contract/award (if available from Franconnect). Max 100 chars for value. Consider sending with a `currency` parameter (e.g., 'USD') following GA4 standards.|`49500.00`|||100||||
-|`user_data.sha256_first_name`|string|recommended|SHA-256 Hashed first name of the user. Required if sending PII. Max 100 chars.|`916b1f...83cc`|`^[a-fA-F0-9]{64}$`|64|64||||
-|`user_data.sha256_last_name`|string|recommended|SHA-256 Hashed last name of the user. Required if sending PII. Max 100 chars.|`10eb1e...5d2`|`^[a-fA-F0-9]{64}$`|64|64||||
-|`user_data.sha256_user_email`|string|recommended|SHA-256 Hashed email address of the user. Required if sending PII. Max 100 chars.|`c90b82...1a6f`|`^[a-fA-F0-9]{64}$`|64|64||||
-|`user_data.sha256_user_phone_number`|string|recommended|SHA-256 Hashed phone number of the user. Required if sending PII. Max 100 chars.|`048140...76f9d`|`^[a-fA-F0-9]{64}$`|64|64||||
-|`user_data.sha256_street`|string|recommended|SHA-256 Hashed street address of the user. Required if sending PII. Max 100 chars.|`d96546...3c7fa`|`^[a-fA-F0-9]{64}$`|64|64||||
-|`user_data.sha256_city`|string|recommended|SHA-256 Hashed city of the user. Required if sending PII. Max 100 chars.|`c55ec4...f3f7`|`^[a-fA-F0-9]{64}$`|64|64||||
-|`user_data.sha256_region`|string|recommended|SHA-256 Hashed state/region of the user. Required if sending PII. Max 100 chars.|`8e9e26...8ccf15`|`^[a-fA-F0-9]{64}$`|64|64||||
-|`user_data.sha256_postal_code`|string|recommended|SHA-256 Hashed postal code of the user. Required if sending PII. Max 100 chars.|`a187be...0f15e`|`^[a-fA-F0-9]{64}$`|64|64||||
-|`user_data.sha256_country`|string|recommended|SHA-256 Hashed country code of the user. Required if sending PII. Max 100 chars.|`aa5ab3...0046`|`^[a-fA-F0-9]{64}$`|64|64||||
-
+| Field                                     | Type   | Required      | Description                                                                                                                           | Example                           |
+| ----------------------------------------- | ------ | ------------- | ------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
+| `api_secret`                              | string | **Required** | The API secret for the GA4 property. Found in GA4 Admin: Data Streams > Measurement Protocol API secrets.                               | `fKhnzB9URSqghrauTtjGMw`           |
+| `measurement_id`                          | string | **Required** | The identifier for the GA4 data stream. Found in GA4 Admin: Data Streams.                                                              | `G-3BQ5YPKFRC`                    |
+| `client_id`                               | string | **Required** | Unique identifier for a user/client instance. Essential for linking offline events to online user activity.                           | `1704286278.1678886400`           |
+| `timestamp_micros`                        | string | **Required** | Timestamp of the event in Unix epoch microseconds. GA4 accepts events up to 72 hours old.                                             | `1679232000000000`                |
+| `events[].name`                           | string | **Required** | The custom name for your conversion event. Max 40 chars, alphanumeric & underscores, must start with a letter.                        | `close_convert_lead`              |
+| `events[].params.value`                   | number | **Required** | **Standard Parameter.** The monetary value of the contract. Using `value` allows GA4 to automatically process it as revenue.          | `49500.00`                        |
+| `events[].params.currency`                | string | **Required** | **Standard Parameter.** The 3-letter ISO 4217 currency code for the `value`. Required when `value` is present.                        | `USD`                             |
+| `events[].params.franconnect_lead_id`     | string | Recommended   | (Custom) Hashed unique identifier for the lead in Franconnect. Useful for analysis.                                                   | `<hashed_franconnect_lead_id>`    |
+| `events[].params.conversion_timestamp`    | string | Recommended   | (Custom) Timestamp in Unix epoch microseconds when the lead was converted/awarded.                                                    | `1679232000000`                   |
+| `events[].params.detailed_event`          | string | Optional      | (Custom) A descriptive name for easily identifying the event source in GA4.                                                           | `Franconnect Close Convert Lead`  |
+| `user_data.address.sha256_first_name`     | string | Recommended   | SHA-256 Hashed first name of the user.                                                                                                | `<hashed_value>`                  |
+| `user_data.address.sha256_last_name`      | string | Recommended   | SHA-256 Hashed last name of the user.                                                                                                 | `<hashed_value>`                  |
+| `user_data.address.sha256_street`         | string | Recommended   | SHA-256 Hashed street address of the user.                                                                                            | `<hashed_value>`                  |
+| `user_data.address.city`                  | string | Recommended   | **Unhashed** city of the user, normalized (e.g., lowercase, no punctuation).                                                          | `new york`                        |
+| `user_data.address.region`                | string | Recommended   | **Unhashed** state/region of the user, normalized (e.g., 'ny' for New York).                                                          | `ny`                              |
+| `user_data.address.postal_code`           | string | Recommended   | **Unhashed** postal code of the user.                                                                                                 | `10011`                           |
+| `user_data.address.country`               | string | Recommended   | **Unhashed** two-letter ISO country code of the user.                                                                                 | `us`                              |
+| `user_data.sha256_email_address`          | array  | Recommended   | Array containing the SHA-256 Hashed email address of the user.                                                                        | `["<hashed_email>"]`              |
+| `user_data.sha256_phone_number`           | array  | Recommended   | Array containing the SHA-256 Hashed phone number of the user (normalized to E.164 format before hashing).                             | `["<hashed_phone_number>"]`       |
 
 
 
