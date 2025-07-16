@@ -15,15 +15,17 @@ Content-Type: application/json
   "client_id": "<client_id>",
   "timestamp_micros": "<timestamp_micros>",
   "user_data": {
-    "sha256_first_name": "<hashed_user_first_name>",
-    "sha256_last_name": "<hashed_user_last_name>",
-    "sha256_user_email": "<hashed_user_email>",
-    "sha256_user_phone_number": "<hashed_user_phone_number>",
-    "sha256_street": "<hashed_street>",
-    "sha256_city": "<hashed_city>",
-    "sha256_region": "<hashed_region>",
-    "sha256_postal_code": "<hashed_postal_code>",
-    "sha256_country": "<hashed_country>"
+    "address": {
+      "sha256_first_name": "<hashed_user_first_name>",
+      "sha256_last_name": "<hashed_user_last_name>",
+      "sha256_street": "<hashed_street>",
+      "city": "<normalized_city>",
+      "region": "<normalized_region>",
+      "postal_code": "<normalized_postal_code>",
+      "country": "<normalized_country_code>"
+    },
+    "sha256_email_address": ["<hashed_user_email>"],
+    "sha256_phone_number": ["<hashed_user_phone_number>"]
   },
   "events": [
     {
@@ -32,6 +34,7 @@ Content-Type: application/json
         "franconnect_lead_id": "<hashed_franconnect_lead_id>",
         "conversion_timestamp": "<conversion_timestamp_micros>",
         "franchise_contract_value": <franchise_contract_value>,
+        "currency": "<currency_code>",
         "detailed_event": "Franconnect Close Convert Lead"
       }
     }
