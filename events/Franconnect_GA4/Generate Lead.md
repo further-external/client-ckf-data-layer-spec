@@ -11,36 +11,39 @@ Content-Type: application/json
 
 ```js
 {
-  "client_id": "<client_id>",
-  "timestamp_micros": "<timestamp_micros>",
-  "user_data": {
-    "address": {
-      "sha256_first_name": "<hashed_user_first_name>",
-      "sha256_last_name": "<hashed_user_last_name>",
-      "sha256_street": "<hashed_street>",
-      "city": "<normalized_city>",
-      "region": "<normalized_region>",
-      "postal_code": "<normalized_postal_code>",
-      "country": "<normalized_country_code>"
-    },
-    "sha256_email_address": ["<hashed_user_email>"],
-    "sha256_phone_number": ["<hashed_user_phone_number>"]
-  },
-  "events": [
-    {
-      "name": "generate_lead",
-      "params": {
-        "franconnect_lead_id": "<hashed_franconnect_lead_id>",
+  "client_id": "<client_id>",
+  "user_id": "<hashed_email_as_user_id>", //Planned for phase 2
+  "timestamp_micros": "<timestamp_micros>",
+  "user_data": {
+    "address": {
+      "sha256_first_name": "<hashed_user_first_name>",
+      "sha256_last_name": "<hashed_user_last_name>",
+      "sha256_street": "<hashed_street>",
+      "city": "<normalized_city>",
+      "region": "<normalized_region>",
+      "postal_code": "<normalized_postal_code>",
+      "country": "<normalized_country_code>"
+    },
+    "sha256_email_address": ["<hashed_user_email>"],
+    "sha256_phone_number": ["<hashed_user_phone_number>"]
+  },
+  "events": [
+    {
+      "name": "generate_lead",
+      "params": {
+        "franconnect_lead_id": "<hashed_franconnect_lead_id>",
         "lead_source": "Franconnect",
-        "utm_source": "<franconnect_utm_source>",
-        "utm_medium": "<franconnect_utm_medium>",
-        "utm_campaign": "<franconnect_utm_campaign>",
-        "is_international": "<true_or_false>",
-        "detailed_event": "Franconnect Generate Lead"
-      }
-    }
-  ]
+        "utm_source": "<captured_utm_source>", //For campaign Attribution
+        "utm_medium": "<captured_utm_medium>", //For campaign Attribution
+        "utm_campaign": "<captured_utm_campaign>", //For campaign Attribution
+        "gclid": "<captured_gclid>", //For campaign Attribution
+        "is_international": "<true_or_false>",
+        "detailed_event": "Franconnect Generate Lead"
+      }
+    }
+  ]
 }
+
 ```
 
 ## Variable Definitions
