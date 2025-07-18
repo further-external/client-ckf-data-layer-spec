@@ -11,32 +11,37 @@ Content-Type: application/json
 
 ```js
 {
-  "client_id": "<client_id>",
-  "timestamp_micros": "<timestamp_micros>",
-  "user_data": {
-    "address": {
-      "sha256_first_name": "<hashed_user_first_name>",
-      "sha256_last_name": "<hashed_user_last_name>",
-      "sha256_street": "<hashed_street>",
-      "city": "<normalized_city>",
-      "region": "<normalized_region>",
-      "postal_code": "<normalized_postal_code>",
-      "country": "<normalized_country_code>"
-    },
-    "sha256_email_address": ["<hashed_user_email>"],
-    "sha256_phone_number": ["<hashed_user_phone_number>"]
-  },
-  "events": [
-    {
-      "name": "working_lead",
-      "params": {
-        "franconnect_lead_id": "<hashed_franconnect_lead_id>",
-        "working_timestamp": "<working_timestamp_micros>",
-        "call_type": "<call_type>",
-        "detailed_event": "Franconnect Working Lead"
-      }
-    }
-  ]
+  "client_id": "<client_id>",
+  "user_id": "<hashed_email_as_user_id>", //Planned for phase 2
+  "timestamp_micros": "<timestamp_micros>",
+  "user_data": {
+    "address": {
+      "sha256_first_name": "<hashed_user_first_name>",
+      "sha256_last_name": "<hashed_user_last_name>",
+      "sha256_street": "<hashed_street>",
+      "city": "<normalized_city>",
+      "region": "<normalized_region>",
+      "postal_code": "<normalized_postal_code>",
+      "country": "<normalized_country_code>"
+    },
+    "sha256_email_address": ["<hashed_user_email>"],
+    "sha256_phone_number": ["<hashed_user_phone_number>"]
+  },
+  "events": [
+    {
+      "name": "working_lead",
+      "params": {
+        "franconnect_lead_id": "<hashed_franconnect_lead_id>",
+        "working_timestamp": "<working_timestamp_micros>",
+        "call_type": "<call_type>",
+        "utm_source": "<stored_utm_source>", //For campaig Attribution
+        "utm_medium": "<stored_utm_medium>", //For campaig Attribution
+        "utm_campaign": "<stored_utm_campaign>", //For campaig Attribution
+        "gclid": "<stored_gclid>", //For campaig Attribution
+        "detailed_event": "Franconnect Working Lead"
+      }
+    }
+  ]
 }
 ```
 
