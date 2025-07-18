@@ -13,6 +13,7 @@ Content-Type: application/json
 ```js
 {
   "client_id": "<client_id>",
+  "user_id": "<hashed_email_as_user_id>", //Planned for phase 2
   "timestamp_micros": "<timestamp_micros>",
   "user_data": {
     "address": {
@@ -35,6 +36,10 @@ Content-Type: application/json
         "currency": "<currency_code>",
         "franconnect_lead_id": "<hashed_franconnect_lead_id>",
         "conversion_timestamp": "<conversion_timestamp_micros>",
+        "utm_source": "<stored_utm_source>", //For campaign Attribution
+        "utm_medium": "<stored_utm_medium>", //For campaign Attribution
+        "utm_campaign": "<stored_utm_campaign>", //For campaign Attribution
+        "gclid": "<stored_gclid>", //For campaign Attribution
         "detailed_event": "Franconnect Close Convert Lead"
       }
     }
