@@ -20,10 +20,10 @@ dataLayer.push({
     "sha256_user_email": "<hashed_user_email>",
     "sha256_user_phone_number": "<hashed_user_phone_number>",
     "sha256_street": "<hashed_street>",
-    "sha256_city": "hashed_city",
-    "sha256_region": "<hashed_region>",
-    "sha256_postal_code": "<hashed_postal_code>",
-    "sha256_country": "<hashed_country>"
+    "city": "<city>",
+    "region": "<region>",
+    "postal_code": "<postal_code>",
+    "country": "country>"
   }]
 })
 
