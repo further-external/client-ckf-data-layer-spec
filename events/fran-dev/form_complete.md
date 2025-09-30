@@ -15,7 +15,8 @@ dataLayer.push({
   "event_data": {
     "category": "<category>",
     "identifier": "<identifier>",
-    "name": "<name>"
+    "name": "<name>",
+    "net_worth_selection": "<net_worth_selection>"
   },
   "user_data": [{
     "sha256_first_name": "<hashed_user_first_name>",
@@ -39,6 +40,7 @@ dataLayer.push({
 |category|string|recommended|A human-readable identifier whose purpose will vary by event, but generally is used to group things (forms, links, videos) into loose associations based upon shared characteristics. If running low on custom dimensions, you may combine multiple categories together in this field, separated by greater than (>) or slash (/). See https://schema.org/category.|Job Application|||||||
 |identifier|string|recommended|The form machine-readable name. This should be a unique value specific to this form, if one exists. If one does not exist, this can also be populated with the same value as the <name>.|form-12345|||||||
 |name|string|required|The form human-readable name. This should be something that an analyst without a deep knowledge of the technical implementation of the site can easily identify the form with. It should be lowercase snake_case.|caregiver_1078_application|||||||
+|net_worth_selection|string|required|The value from the option selected by the user from the net worth dropdwon|' Under $250K' or '$250K - $500k'|||||||
 |user_data|array|required|An array containing user-provided data for enhanced conversions. Each object in the array represents a user.||||||||
 |user_data.sha256_first_name|string|recommended|SHA-256 hashed value of the user's first name.||||||||
 |user_data.sha256__last_name|string|recommended|SHA-256 hashed value of the user's last name.||||||||
